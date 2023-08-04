@@ -52,6 +52,7 @@ const Cart = () => {
           if(cart.includes(item)){
             const index = cart.indexOf(item);
             cart.splice(index,1)
+            console.log("Product Removed From Cart")
             console.log("My Cart",cart)
           }else{
               console.log("Already NOT in the cart");
