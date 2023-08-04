@@ -40,14 +40,14 @@ const Cart = () => {
     
       const sections = data.map((data) => {
     
-        function handleAddToCart(e){
+        function handleAdd(e){
           const item = e.target.previousSibling.previousSibling.childNodes[1].innerHTML
           cart.push(item)
           console.log("Product Added to Cart")
           console.log("My Cart", cart)
         }
     
-        function handleRemoveFromCart(e){
+        function handleRemove(e){
           const item = e.target.previousSibling.previousSibling.previousSibling.childNodes[1].innerHTML
           if(cart.includes(item)){
             const index = cart.indexOf(item);
@@ -72,8 +72,8 @@ const Cart = () => {
                   <div className="wrapper"> 
                     Price: <p id="productPrice" className="productPrice">{product.price}</p>
                   </div>
-                  <button onClick={handleAddToCart}>Add to the cart</button>
-                  <button onClick={handleRemoveFromCart}>Remove from cart</button>
+                  <button onClick={handleAdd}>Add to the cart</button>
+                  <button onClick={handleRemove}>Remove from cart</button>
                 </div>
               ))}
             </div>
